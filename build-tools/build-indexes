@@ -14,7 +14,7 @@ if (!fs.existsSync('caches/pokemon-showdown')) {
 		cwd: 'caches',
 =======
 if (!fs.existsSync('data/pokemon-showdown')) {
-	child_process.execSync('git clone https://github.com/Cylvanis/pokemon-showdown.git', {
+	child_process.execSync('git clone https://github.com/cylvanis/pokemon-showdown.git', {
 		cwd: 'data',
 >>>>>>> 1c8e23ff (Update build-indexes)
 	});
