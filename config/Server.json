@@ -1,0 +1,11 @@
+{
+	"id": "Unovadown",
+	"host": "Unova.Showdown.com",
+	"port": 1743,
+	"httpport": 8000,
+	"altport": 80,
+	"registered": true,
+	"https": true,
+	"afd": false,
+	"loginOverride": null
+}
