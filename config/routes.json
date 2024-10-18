@@ -1,8 +1,8 @@
 {
-    "root": "Unova.Showdown.com",
-    "client": "Unova.Showdown.com",
     "clientProtocol": "https",
+    "root": "pokemonshowdown.com",
+    "client": "delta.phunkmaster.com",
     "dex": "dex.pokemonshowdown.com",
-    "replays": "Unova.Showdown.com/replays",
-    "users": "Unova.Showdown.com/users"
+    "replays": "replay.phunkmaster.com",
+    "users": "pokemonshowdown.com/users"
 }
