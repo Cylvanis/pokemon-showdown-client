@@ -214,7 +214,7 @@ if (!Storage.bg.id) {
  *********************************************************/
 
 // Prefs are canonically stored in showdown_prefs in localStorage
-// in the origin https://play.pokemonshowdown.com
+// in the origin https://
 
 // We try loading things from the origin, anyway, in case third-party
 // localStorage is banned, and since prefs are cached in other
@@ -573,7 +573,7 @@ Storage.initTestClient = function () {
 
 /**
  * Teams are normally loaded from `localStorage`.
- * If the client isn't running on `play.pokemonshowdown.com`, though,
+ * If the client isn't running on ``, though,
  * teams are received from `crossdomain.php` instead.
  */
 

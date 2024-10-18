@@ -19,14 +19,14 @@ RewriteEngine on
 RewriteCond %{HTTP:X-Forwarded-Proto} ^http$
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
 RewriteCond %{QUERY_STRING} !^insecure [NC]
-RewriteRule ^([A-Za-z0-9-]*)$ https://play.pokemonshowdown.com/$1 [R=307,NE,L]
+RewriteRule ^([A-Za-z0-9-]*)$ https://delta.phunkmaster.com/$1 [R=307,NE,L]
 
 # redirects
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
-RewriteRule ^appeals?\/?$ https://play.pokemonshowdown.com/view-help-request--appeal [R=302,L]
+RewriteRule ^appeals?\/?$ https://delta.phunkmaster.com/view-help-request--appeal [R=302,L]
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
-RewriteRule ^report\/?$ https://play.pokemonshowdown.com/view-help-request--report [R=302,L]
-RewriteRule ^requesthelp\/?$ https://play.pokemonshowdown.com/view-help-request--other [R=302,L]
+RewriteRule ^report\/?$ https://delta.phunkmaster.com/view-help-request--report [R=302,L]
+RewriteRule ^requesthelp\/?$ https://delta.phunkmaster.com/view-help-request--other [R=302,L]
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
 RewriteRule ^rooms?suggestions?\/?$ https://www.smogon.com/forums/threads/room-suggestions-are-no-longer-being-taken.3522130/ [R=302,L]
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
@@ -52,7 +52,7 @@ RewriteRule ^contact\/?$ https://pokemonshowdown.com/contact [R=302,L]
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
 RewriteRule ^dex\/?$ https://dex.pokemonshowdown.com/ [R=302,L]
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
-RewriteRule ^insecure\/?$ http://play.pokemonshowdown.com/?insecure [R=302,L]
+RewriteRule ^insecure\/?$ http://delta.phunkmaster.com/?insecure [R=302,L]
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
 RewriteRule ^devdiscord\/?$ https://discord.com/invite/D8QwhsH [R=302,L]
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
@@ -85,10 +85,10 @@ RewriteRule ^sprites\/gen4dp-2-back(.*)?$ sprites/gen4-back$1 [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^sprites\/gen3frlg(.*)?$ sprites/gen3$1 [L,QSA]
 
-RewriteRule ^replays?\/?$ https://replay.pokemonshowdown.com/ [R=302,L]
+RewriteRule ^replays?\/?$ https://replay.phunkmaster.com/ [R=302,L]
 
 RewriteCond %{HTTP_HOST} ^www\.play\.pokemonshowdown\.com$ [NC]
-RewriteRule ^(.*) https://play.pokemonshowdown.com/$1 [R=301,L]
+RewriteRule ^(.*) https://delta.phunkmaster.com/$1 [R=301,L]
 
 RewriteRule ^style/fonts?/.*?\.(eot|svg|ttf|woff|woff2)$ - [E=SAFE_RESOURCE:1]
 RewriteRule ^data\/.*\.js(?:on)?$ - [E=SAFE_RESOURCE:1]
@@ -96,11 +96,11 @@ Header set Access-Control-Allow-Origin * env=SAFE_RESOURCE
 
 # Redirect old battles to their corresponding replay
 # RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
-# RewriteRule ^battle-([a-z0-9]+-[1-6][0-9]{8})$ https://replay.pokemonshowdown.com/$1 [R=302,L]
+# RewriteRule ^battle-([a-z0-9]+-[1-6][0-9]{8})$ https://replay.phunkmaster.com/$1 [R=302,L]
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
-RewriteRule ^battle-([a-z0-9]+-[0-9]{8})$ https://replay.pokemonshowdown.com/$1 [R=302,L]
+RewriteRule ^battle-([a-z0-9]+-[0-9]{8})$ https://replay.phunkmaster.com/$1 [R=302,L]
 RewriteCond %{HTTP_HOST} ^play\.pokemonshowdown\.com$ [NC]
-RewriteRule ^battle-([a-z0-9]+)$ https://replay.pokemonshowdown.com/$1 [R=302,L]
+RewriteRule ^battle-([a-z0-9]+)$ https://replay.phunkmaster.com/$1 [R=302,L]
 
 # TODO: fix bug where you can't join lobby directly
 RewriteRule ^lobby/?$ / [R=301,L]
@@ -116,7 +116,7 @@ RewriteRule ^preactalpha$ ./preactalpha.html [L,E=INDEX_PAGE:1]
 RewriteRule ^([A-Za-z0-9][A-Za-z0-9-]*)$ ./ [L,E=INDEX_PAGE:1]
 
 # RewriteRule ^crossprotocol\.html$ - [E=CROSSPROTOCOL:1]
-# Header set X-Frame-Options "ALLOW-FROM http://play.pokemonshowdown.com" env=CROSSPROTOCOL
+# Header set X-Frame-Options "ALLOW-FROM http://delta.phunkmaster.com" env=CROSSPROTOCOL
 
 # Headers for the index page.
 Header set Cache-Control "no-cache, no-store, must-revalidate" env=INDEX_PAGE
@@ -137,7 +137,7 @@ Header set Expires "0" env=INDEX_PAGE
 
 AddType 'text/plain; charset=UTF-8' json5
 
-RewriteRule ^replay/battle-([A-Za-z0-9-]+)$ https://replay.pokemonshowdown.com/$1 [R=302,L]
+RewriteRule ^replay/battle-([A-Za-z0-9-]+)$ https://replay.phunkmaster.com/$1 [R=302,L]
 RewriteRule ^replay/turn_(.+)\.png$ replay/turn-image.php?data=$1 [L,QSA]
 
 RewriteCond %{QUERY_STRING} !output=html

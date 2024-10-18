@@ -179,7 +179,7 @@ let replayEmbedContents = fs.readFileSync('play.pokemonshowdown.com/js/replay-em
 replayEmbedContents = replayEmbedContents.replace(/play\.pokemonshowdown\.com/g, routes.client);
 
 // add news, only if it's actually likely to exist
-process.stdout.write("and news... ");
+/*process.stdout.write("and news... ");
 let stdout = '';
 let newsid = 0;
 let news = '[failed to retrieve news]';
@@ -216,5 +216,5 @@ fs.writeFileSync('play.pokemonshowdown.com/js/replay-embed.js', replayEmbedConte
 let replaysContents = fs.readFileSync('replay.pokemonshowdown.com/index.template.php', {encoding: 'utf8'});
 replaysContents = replaysContents.replace(URL_REGEX, addCachebuster);
 fs.writeFileSync('replay.pokemonshowdown.com/index.php', replaysContents);
-
+*/
 console.log("DONE");

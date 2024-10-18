@@ -212,7 +212,7 @@ function toId() {
 		},
 		/**
 		 * Return the path to the login server `action.php` file. AJAX requests
-		 * to this file will always be made on the `play.pokemonshowdown.com`
+		 * to this file will always be made on the ``
 		 * domain in order to have access to the correct cookies.
 		 */
 		getActionPHP: function () {
@@ -404,9 +404,6 @@ function toId() {
 			this.ignore = {};
 			this.supports = {};
 
-			// down
-			// if (document.location.hostname === 'play.pokemonshowdown.com' || document.location.hostname === 'smogtours.psim.us') this.down = true;
-			// this.down = true;
 
 			this.addRoom('');
 			this.topbar = new Topbar({el: $('#header')});
